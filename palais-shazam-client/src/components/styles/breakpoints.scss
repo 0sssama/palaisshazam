@@ -7,6 +7,9 @@
 @mixin notDesktop {
 	@media (max-width: 64em) { @content; }
 }
+@mixin tabletNotDesktop {
+	@media (max-width: 64em) and (min-width: 37.5em) { @content; }
+}
 @mixin desktop {
 	@media (min-width: 64.01em) { @content; }	// 1024px
 }

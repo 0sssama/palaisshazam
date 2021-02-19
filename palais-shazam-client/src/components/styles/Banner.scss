@@ -28,7 +28,7 @@
     }
     .header-effect {
         z-index: -2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), 10%, rgba(0, 0, 0, 0));
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), 10%, rgba(0, 0, 0, 0));
     }
     .banner-video {
         position: absolute;
@@ -43,6 +43,11 @@
             flex-shrink: 0;
         }
     }
+    .banner-video {
+        @include mobile {
+            display: none;
+        }
+    }
     .pic {
         z-index: -3;
         background-size: cover;
@@ -55,17 +60,30 @@
         &.current {
             opacity: 1;
         }
+        &.video-initialized {
+            @include tablet {
+                display: none;
+                animation: none;
+            }
+        }
         &.p-1 {
-            background-image: url('https://scontent.fcmn5-1.fna.fbcdn.net/v/t1.0-9/118868399_4246109722130720_1487852021292091320_o.jpg?_nc_cat=100&ccb=3&_nc_sid=730e14&_nc_ohc=v8JzIrajHukAX-eV8t_&_nc_ht=scontent.fcmn5-1.fna&oh=351694d2728ba4e45a6df22e6f9d6a27&oe=605233F9');
+            background-image: url('https://i.ibb.co/LdJQ7jT/pic-1.jpg');
         }
         &.p-2 {
-            background-image: url('https://scontent.frba4-1.fna.fbcdn.net/v/t1.0-9/118226401_4173071976101162_170094518881516601_o.jpg?_nc_cat=105&ccb=3&_nc_sid=730e14&_nc_ohc=oX9z8OhHjAAAX--F-u_&_nc_ht=scontent.frba4-1.fna&oh=f4116447e5c13f418b1d3edacf545f72&oe=605292B8'); 
+            background-image: url('https://i.ibb.co/6BZV0rP/pic-2.jpg'); 
         }
         &.p-3 {
-            background-image: url('https://scontent.frba4-1.fna.fbcdn.net/v/t1.0-9/118289216_4173071922767834_8208551271546902784_o.jpg?_nc_cat=103&ccb=3&_nc_sid=730e14&_nc_ohc=MJMBXNPMC-IAX8_Ng-i&_nc_ht=scontent.frba4-1.fna&oh=50a1b4b31d70764385e38802303db51e&oe=6055747E'); 
+            background-image: url('https://i.ibb.co/C2LPff3/pic-3.jpg'); 
         }
         &.p-4 {
-            background-image: url('https://scontent.frba4-1.fna.fbcdn.net/v/t1.0-9/143618402_4899671973441155_1808891660528965821_o.jpg?_nc_cat=104&ccb=3&_nc_sid=9267fe&_nc_ohc=Ut_rrOtNPXwAX8DcDQx&_nc_ht=scontent.frba4-1.fna&oh=50d1f9bf977e795ac71e81ae180a728f&oe=6052B78F');
+            background-image: url('https://i.ibb.co/ZKVTcnY/pic-4.jpg');
         }
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
     }
 }

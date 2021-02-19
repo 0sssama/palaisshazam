@@ -1,0 +1,18 @@
+@import 'breakpoints';
+
+.About {
+    --paddingSides: 5vw;
+    --paddingVertical: 15vh;
+    @include mobile {
+        --paddingSides: 10vw;
+    }
+    padding: var(--paddingVertical) var(--paddingSides);
+    .title {
+        text-align: center;
+        &.big {
+            font-family: 'Josefin Sans';
+            font-weight: 700;
+            font-size: 3rem;
+        }
+    }
+}

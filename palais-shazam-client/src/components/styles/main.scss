@@ -11,15 +11,19 @@
 
 :root { // colors ESKETITI
     --mainGold: #c9905a;
+    --goldLowOp: rgba(201, 144, 90, 0.3);
     --darkGold: #b37842;
     --hoverGold: #e5b98f;
     --mainBlue: #1b3c80;
+    --blueLowOp: rgba(27, 60, 128, 0.2);
     --darkBlue: #0c2558;
     --hoverBlue: #4f6ead;
     --mainDark: #232323;
-    --lowOpacityDark: rgb(35, 35, 35, 0.85);
+    --lowOpacityDark: rgba(35, 35, 35, 0.85);
+    --veryLowOpacityDark: rgba(35, 35, 35, 0.4);
     --mainLight: #efefef;
-    --lowOpacityLight: rgb(239, 239, 239, 0.85);
+    --hoverLight: rgb(221, 221, 221);
+    --lowOpacityLight: rgba(239, 239, 239, 0.85);
     --shadow: rgba(0, 0, 0, 0.12);
     --lightShadow: rgba(255, 255, 255, 0.12);
 

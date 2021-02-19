@@ -5,7 +5,10 @@ import logo from './../images/logo.png'
 function MainHeader(props) {
     const { toggleMenu } = props
     return (
-        <header className="main">
+        <header className="main" 
+            data-aos="fade-down"
+            data-aos-duration="1500"
+            >
             <div className="ham-menu">
                 <div className="actual-ham-menu" onClick={toggleMenu}>
                     <span></span>

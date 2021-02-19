@@ -66,7 +66,7 @@ function MobileMenu(props) {
                 <ul className="links">
                     {menu.map(link => (
                         <li key={link.name}>
-                            <a href={link.link}>
+                            <a href={link.link} onClick={toggleMenu}>
                                 {link.name}
                             </a>
                         </li>

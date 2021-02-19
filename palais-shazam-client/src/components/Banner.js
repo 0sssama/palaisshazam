@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import './styles/Banner.scss'
 import bannerVideo from './../images/palais.mp4'
+import BookingForm from './BookingForm'
+import ScrollButton from './ScrollButton'
 
 function Banner() {
-    const [currentPic, setCurrentPic] = useState(2)
+    let currentPic = 1
     const picsNum = 4
     const nextPic = () => {
         if (currentPic === picsNum) {
-            setCurrentPic(1)
+            currentPic = 1
         } else {
-            setCurrentPic(currentPic+1)
+            currentPic++
         }
         showImage(currentPic)
     }
@@ -25,22 +27,22 @@ function Banner() {
         }
     }
     const showVideo = () => {
-        for (let i = 1; i <= picsNum; i++) {
-            let imageElement = document.querySelector(`.pic.p-${i}`);
-            imageElement.style.display = 'none'
-            imageElement.style.animation = 'none'
-        }
-        document.querySelector('#bg-video').play()
+        setTimeout(() => {
+            for (let i = 1; i <= picsNum; i++) {
+                let imageElement = document.querySelector(`.pic.p-${i}`);
+                imageElement.classList.add('video-initialized')
+            }
+            document.querySelector('#bg-video').play()
+        }, 4000);
     }
     useEffect(() => {
-        setInterval(()=>{
-            nextPic()
-        }, 10000)
+        setInterval(()=>{nextPic()}, 10000)
     },[])
     return (
         <div className="banner">
             <div className="content">
-                hellow
+                <BookingForm />
+                <ScrollButton />
             </div>
             <div className="header-effect"></div>
             <div className="banner-video">
