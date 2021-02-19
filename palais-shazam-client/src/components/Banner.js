@@ -45,15 +45,10 @@ function Banner() {
                 <ScrollButton />
             </div>
             <div className="header-effect"></div>
-            <div className="banner-video">
-                <video muted loop id="bg-video" onLoadedData={showVideo}>
-                    <source src={bannerVideo} type="video/mp4" />
-                </video>
-            </div>
-            <div className="pic p-1 current"></div>
-            <div className="pic p-2"></div>
-            <div className="pic p-3"></div>
-            <div className="pic p-4"></div>
+            <div className="pic p-1 current" style={{backgroundImage: "url('./pic-1.jpg')"}}></div>
+            <div className="pic p-2" style={{backgroundImage: "url('./pic-2.jpg')"}}></div>
+            <div className="pic p-3" style={{backgroundImage: "url('./pic-3.jpg')"}}></div>
+            <div className="pic p-4" style={{backgroundImage: "url('./pic-4.jpg')"}}></div>
         </div>
     )
 }
