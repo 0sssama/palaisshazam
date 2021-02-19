@@ -44,6 +44,11 @@ function Banner() {
                 <BookingForm />
                 <ScrollButton />
             </div>
+            <div className="banner-video">
+                <video muted loop id="bg-video" onLoadedData={showVideo}>
+                    <source src={bannerVideo} type="video/mp4" />
+                </video>
+            </div>
             <div className="header-effect"></div>
             <div className="pic p-1 current" style={{backgroundImage: "url('./pic-1.jpg')"}}></div>
             <div className="pic p-2" style={{backgroundImage: "url('./pic-2.jpg')"}}></div>
