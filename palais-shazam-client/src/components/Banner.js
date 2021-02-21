@@ -27,11 +27,14 @@ function Banner() {
         }
     }
     const showVideo = () => {
+        document.querySelector('.loading').classList.remove('hidden')
         setTimeout(() => {
+            document.querySelector('.loading').classList.add('hidden')
             for (let i = 1; i <= picsNum; i++) {
                 let imageElement = document.querySelector(`.pic.p-${i}`);
                 imageElement.classList.add('video-initialized')
             }
+            document.querySelector('#bg-video').classList.add('start')
             document.querySelector('#bg-video').play()
         }, 4000);
     }
@@ -45,6 +48,7 @@ function Banner() {
                 <ScrollButton />
             </div>
             <div className="banner-video">
+                <div className="loading hidden"></div>
                 <video muted loop id="bg-video" onLoadedData={showVideo}>
                     <source src={bannerVideo} type="video/mp4" />
                 </video>

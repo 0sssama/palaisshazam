@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.164cef46.chunk.css",
-    "main.js": "/static/js/main.b1597bec.chunk.js",
-    "main.js.map": "/static/js/main.b1597bec.chunk.js.map",
+    "main.css": "/static/css/main.6560d8a1.chunk.css",
+    "main.js": "/static/js/main.078b248c.chunk.js",
+    "main.js.map": "/static/js/main.078b248c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.53a692b4.js",
     "runtime-main.js.map": "/static/js/runtime-main.53a692b4.js.map",
     "static/js/2.35ae377e.chunk.js": "/static/js/2.35ae377e.chunk.js",
     "static/js/2.35ae377e.chunk.js.map": "/static/js/2.35ae377e.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.164cef46.chunk.css.map": "/static/css/main.164cef46.chunk.css.map",
+    "static/css/main.6560d8a1.chunk.css.map": "/static/css/main.6560d8a1.chunk.css.map",
     "static/js/2.35ae377e.chunk.js.LICENSE.txt": "/static/js/2.35ae377e.chunk.js.LICENSE.txt",
+    "static/media/Banner.scss": "/static/media/Loading.629706a5.gif",
     "static/media/icon.3653032e.png": "/static/media/icon.3653032e.png",
     "static/media/logo.7c01985f.png": "/static/media/logo.7c01985f.png",
     "static/media/palais.24f80442.mp4": "/static/media/palais.24f80442.mp4"
@@ -17,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.53a692b4.js",
     "static/js/2.35ae377e.chunk.js",
-    "static/css/main.164cef46.chunk.css",
-    "static/js/main.b1597bec.chunk.js"
+    "static/css/main.6560d8a1.chunk.css",
+    "static/js/main.078b248c.chunk.js"
   ]
 }

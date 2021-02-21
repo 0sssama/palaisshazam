@@ -3,7 +3,7 @@ import './styles/Rooms.scss'
 
 function Rooms() {
     let currentImage = 1
-    const imgCount = 2
+    const imgCount = 3
     const nextImage = () => {
         if (currentImage === imgCount) {
             currentImage = 1
@@ -64,6 +64,7 @@ function Rooms() {
                 </div>
                 <div className="room-pic pic-1 current" style={{backgroundImage: 'url(./pic-3.jpg)'}}></div>
                 <div className="room-pic pic-2" style={{backgroundImage: 'url(./pic-4.jpg)'}}></div>
+                <div className="room-pic pic-3" style={{backgroundImage: 'url(./pic-5.jpg)'}}></div>
             </div>
         </div>
     )

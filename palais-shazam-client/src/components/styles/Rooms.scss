@@ -12,9 +12,12 @@
         grid-template-rows: var(--roomRowHeight);
     }
     .text-container {
-        padding: 4rem 5rem;
-        @include mobile {
-            padding: 2rem 1rem;
+        padding: 2rem 1rem;
+        @include tablet {
+            padding: 2rem;
+        }
+        @include desktop {
+            padding: 4rem 5rem;
         }
         .title {
             font-size: 1.8rem;
@@ -93,7 +96,6 @@
                 background-color: var(--lowOpacityDark);
             }
             &.previous {
-                left: 0;
                 padding: {
                     left: 1.2rem;
                     bottom: 1rem;

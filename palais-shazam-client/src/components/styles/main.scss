@@ -119,12 +119,13 @@ input {
     align-items: center;
     cursor: pointer;
     width: fit-content;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     p {
-        font-weight: 500;
+        font-family: 'Josefin Sans';
+        font-weight: 600;
         color: var(--mainLight);
         transition: color 500ms ease;
-        padding-bottom: 0.3rem;
+        padding-bottom: 0.4rem;
         text-transform: uppercase;
     }
     span {
