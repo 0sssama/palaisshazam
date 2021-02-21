@@ -6,6 +6,7 @@ import MobileMenu from './components/MobileMenu'
 import BGEffect from './components/BGEffect'
 import Banner from './components/Banner'
 import About from './components/About'
+import Rooms from './components/Rooms'
 
 function App() {
   const [ menuStatus, setMenuStatus ] = useState(false)
@@ -19,7 +20,9 @@ function App() {
       <FixedHeader menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <MainHeader menuStatus={menuStatus} toggleMenu={toggleMenu} />
       <Banner />
+      <div id="scroll"></div>
       <About />
+      <Rooms />
     </div>
   );
 }

@@ -1,0 +1,132 @@
+@import 'breakpoints';
+
+.rooms-container {
+    --roomRowHeight: 20rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto var(--roomRowHeight);
+    @include tablet {
+        --roomRowHeight: 60vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: var(--roomRowHeight);
+    }
+    .text-container {
+        padding: 4rem 5rem;
+        @include mobile {
+            padding: 2rem 1rem;
+        }
+        .title {
+            font-size: 1.8rem;
+            @include mobile {
+                font-size: 1.5rem;
+            }
+            @include mobile {
+                padding-left: 1rem;
+            }
+            font-weight: 600;
+            p {
+                letter-spacing: 1px;
+                font-family: 'Josefin Sans'
+            }
+            span {
+                width: 5rem;
+                height: 1px;
+                margin-top: 1.5rem;
+                background-color: var(--mainGold);
+                display: block;
+            }
+        }
+        .content {
+            margin-top: 3rem;
+            @include mobile {
+                margin-top: 1.6rem;
+            }
+            font-size: 1.1rem;
+            @include mobile {
+                font-size: 1rem;
+            }
+            padding: 1rem 0.4rem 0;
+            .explore-btn {
+                margin-top: 2rem;
+                @include mobile {
+                    margin: 2rem auto 0;
+                }
+            }
+            .text {
+                line-height: 1.6rem;
+            }
+        }
+    }
+    .picture-container {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        .btn {
+            width: 50%;
+            height: 40px;
+            position: absolute; 
+            z-index: 1;
+            cursor: pointer;
+            bottom: 0;
+            background-color: var(--veryLowOpacityDark);
+            transition: background-color 500ms ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                --spanSize: 18px;
+                display: block;
+                width: var(--spanSize);
+                height: var(--spanSize);
+                border: 3px solid transparent;
+                border-right-color: var(--mainLight);
+                border-bottom-color: var(--mainLight);
+                &.previous {
+                    transform: rotate(135deg)
+                }
+                &.next {
+                    transform: rotate(-45deg);
+                }
+            }
+            &:hover {
+                background-color: var(--lowOpacityDark);
+            }
+            &.previous {
+                left: 0;
+                padding: {
+                    left: 1.2rem;
+                    bottom: 1rem;
+                    top: 1rem;
+                    right: 0.4rem;
+                }
+            }
+            &.next {
+                right: 0;
+                padding: {
+                    right: 1.2rem;
+                    bottom: 1rem;
+                    top: 1rem;
+                    left: 0.4rem;
+                }
+            }
+        }
+        .room-pic {
+            position: absolute;
+            top:0;left:0;right:0;bottom:0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: transform 500ms ease,
+                        opacity 1s ease-in-out;
+            &.current {
+                opacity: 1;
+            }
+        }
+        &:hover .current {
+            opacity: 0.8;
+            transform: scale(1.01);
+        }
+    }
+}

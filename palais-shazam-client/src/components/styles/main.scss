@@ -18,22 +18,36 @@
     --blueLowOp: rgba(27, 60, 128, 0.2);
     --darkBlue: #0c2558;
     --hoverBlue: #4f6ead;
-    --mainDark: #232323;
-    --lowOpacityDark: rgba(35, 35, 35, 0.85);
-    --veryLowOpacityDark: rgba(35, 35, 35, 0.4);
-    --mainLight: #efefef;
-    --hoverLight: rgb(221, 221, 221);
-    --lowOpacityLight: rgba(239, 239, 239, 0.85);
-    --shadow: rgba(0, 0, 0, 0.12);
-    --lightShadow: rgba(255, 255, 255, 0.12);
-
+    
 }
 
 body {
-    min-height: 200vh;
+    min-height: 300vh;
     width: 100%;
     color: var(--mainLight);
     background-color: var(--mainDark);
+    overflow-x: hidden;
+    &.dark {
+        --mainDark: #232323;
+        --lowOpacityDark: rgba(35, 35, 35, 0.85);
+        --veryLowOpacityDark: rgba(35, 35, 35, 0.4);
+        --mainLight: #efefef;
+        --hoverLight: rgb(221, 221, 221);
+        --lowOpacityLight: rgba(239, 239, 239, 0.85);
+        --shadow: rgba(0, 0, 0, 0.12);
+        --lightShadow: rgba(255, 255, 255, 0.12);
+    }
+    &.light {
+        --mainDark: #efefef;
+        --lowOpacityDark: rgba(220, 220, 220, 0.85);
+        --veryLowOpacityDark: rgba(220, 220, 220, 0.4);
+        --mainLight: #232323;
+        --hoverLight: rgb(34, 34, 34);
+        --lowOpacityLight: rgba(16, 16, 16, 0.85);
+        --shadow: rgba(255, 255, 255, 0.12);
+        --lightShadow: rgba(0, 0, 0, 0.12);
+
+    }
 }
 
 button, input[type='submit'] {
@@ -99,7 +113,36 @@ input {
     padding: 1rem 1.5rem;
     border-radius: 2px;
 }
-
+.explore-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 1.2rem;
+    p {
+        font-weight: 500;
+        color: var(--mainLight);
+        transition: color 500ms ease;
+        padding-bottom: 0.3rem;
+        text-transform: uppercase;
+    }
+    span {
+        display: block;
+        height: 2px;
+        background-color: var(--mainGold);
+        width: 100%;
+        transition: width 500ms ease;
+    }
+    &:hover {
+        span {
+            width: 60%;
+        }
+        p {
+            color: var(--hoverGold);
+        }
+    }
+}
 .hide-for-mobile {
     @include notDesktop{
         display: none!important;

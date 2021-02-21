@@ -13,6 +13,69 @@
             font-family: 'Josefin Sans';
             font-weight: 700;
             font-size: 3rem;
+            letter-spacing: 3px;
+            line-height: 3.5rem;
+            @include mobile {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+            margin-top: 2rem;
+            span {
+                width: 10rem;
+                @include mobile {
+                    width: 40%;
+                }
+                height: 1px;
+                background-color: var(--mainGold);
+                display: block;
+                margin: 1rem auto 3rem;
+            }
+        }
+        &.smoll {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    }
+    .top {
+        width: 95%;
+        @include tablet {
+            width: 80%;
+        }
+        @include desktop {
+            width: 60%;
+        }
+        margin: auto;
+        text-align: center;
+        img {
+            width: 80px;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .about-text {
+        margin-top: 3rem;
+        text-align: center;
+        width: 95%;
+        @include tablet {
+            width: 80%;
+        }
+        @include desktop {
+            width: 60%;
+        }
+        margin: auto;
+        font-size: 1.1rem;
+        p {
+            line-height: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            &:nth-child(2) {
+                margin-bottom: 3rem;
+            }
+        }
+        button {
+            padding: {
+                top: 0.8rem;
+                bottom: 0.8rem;
+            }
         }
     }
 }

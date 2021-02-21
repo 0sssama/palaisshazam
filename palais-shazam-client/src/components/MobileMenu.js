@@ -6,7 +6,7 @@ function MobileMenu(props) {
     const menu = [
         {
             name: 'About',
-            link: '#about',
+            link: '#scroll',
         },
         {
             name: 'Our Rooms',
