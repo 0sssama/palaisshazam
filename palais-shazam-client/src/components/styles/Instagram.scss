@@ -58,12 +58,18 @@
     .images-container {
         --imageRes: 250px;
         @include mobile {
+            --imageRes: 33vw;
+        }
+        @media screen and (max-width: 336px) {
             --imageRes: 90vw;
         }
         display: grid;
         grid-template-columns: repeat(auto-fit, var(--imageRes));
         grid-template-rows: auto;
         grid-gap: 3rem;
+        @include mobile {
+            grid-gap: 1rem;
+        }
         justify-content: center;
         padding: 2rem 3rem 0;
         .image {

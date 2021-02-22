@@ -56,9 +56,17 @@
         }
         display: flex;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
         align-items: center;
         .trump {
             text-align: right;
+            @include mobile {
+                text-align: center;
+                margin-top: 1rem;
+            }
             font-size: 0.8rem;
             line-height: 1.3rem;
             font-weight: 400;
