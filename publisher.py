@@ -24,7 +24,7 @@ print("")
 print("")
 
 Log("Deleting old build...")
-os.system("rmdir /S palais-shazam-client\\build || rm -rf palais-shazam-client/build")
+os.system("rmdir /S build || rm -rf build")
 time.sleep(0.1)
 Log("Old build deleted successfully.")
 
@@ -32,7 +32,7 @@ print("")
 print("")
 
 Log("Copying new build.")
-os.system("Xcopy /E /I react\\build client\\build || cp -r react/build client")
+os.system("Xcopy /E /I palais-shazam-client\\build build || cp -r palais-shazam-client/build .")
 Log("Build copied successfully")
 
 print("")
@@ -57,5 +57,8 @@ print("")
 Log ("Now pushing...")
 time.sleep(0.5)
 os.system("git push")
+
+print("")
+print("")
 
 Log("Pushed successfully... GG!")

@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import './styles/BookingForm.scss'
 import calendarIcon from './../images/calendar.png'
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
 
 function BookingForm() {
     const [arrival, setArrival] = useState(false)
