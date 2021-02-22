@@ -1,0 +1,107 @@
+@import 'breakpoints';
+
+.footer {
+    .social-media {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+            &:not(:last-child) {
+                margin-right: 0.7rem;
+            }
+            a {
+                ion-icon {
+                    font-size: 1.3rem!important;
+                }
+                text-decoration: none;
+                color: var(--mainBlue);
+                transition: color 400ms ease;
+                &:hover {
+                    color: var(--mainGold)
+                }
+            }
+        }
+    }
+    .cool-section {
+        padding: 7vh 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid var(--mainBlue);
+        .title {
+            font-size: 2rem;
+            @include mobile {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+            }
+            font-weight: 700;
+            color: var(--mainBlue);
+            margin-bottom: 1.3rem;
+            font-family: 'Josefin Sans';
+            text-transform: uppercase;
+        }
+        button {
+            padding: {
+                top: 0.7rem;
+                bottom: 0.7rem;
+            }
+        }
+    }
+    .another-very-cool-section {
+        width: 100%;
+        padding: 3vh 5vw 5vh;
+        @include mobile {
+            padding: 3vh 10vw 5vh;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .trump {
+            text-align: right;
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+            font-weight: 400;
+            color: var(--mainBlue)
+        }
+    }
+    .links-section {
+        padding: 6vh 4rem;
+        @include mobile {
+            padding: 7vh 1.5rem;
+        }
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 100%;
+            li {
+                a {
+                    font-family: 'Josefin Sans';
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: var(--mainBlue);
+                    transition: color 300ms ease;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.8rem!important;
+                    span {
+                        background-color: var(--mainGold);
+                        height: 2px;
+                        margin-top: 4px;
+                        width: 0;
+                        transition: width 400ms ease;
+                    }
+                    &:hover {
+                        color: var(--mainGold);
+                        span {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

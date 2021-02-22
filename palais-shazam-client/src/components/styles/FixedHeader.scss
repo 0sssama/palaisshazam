@@ -7,13 +7,17 @@ header.fixed {
     align-items: center;
     justify-content: space-between;
     top:0; left: 0; right: 0;
-    height: 4rem;
-    background-color: var(--lowOpacityDark);
-    color: var(--mainlight);
+    height: 3.7rem;
+    background-color: var(--veryLowOpacityDark);
+    &.mozilla {
+        background-color: var(--lowOpacityDark)
+    }
+    color: var(--mainLight);
     box-shadow: 5px 10px 45px var(--lightShadow);
     transition: transform 1s cubic-bezier(0.59, 0, 0.06, 1);
     transform: translateY(0);
     z-index: 3;
+    backdrop-filter: blur(20px);
     &.hidden {
         transform : translateY(-100%);
     }
@@ -50,13 +54,13 @@ header.fixed {
         transform: translateX(-50%);
         cursor: pointer;
         img {
-            height: 3.2rem;
+            height: 3rem;
         }
     }
     .book-btn {
         height: 100%;
         button {
-            color: var(--mainLight);
+            color: var(--light);
             height: 100%;
             @include notDesktop {
                 font-size: 0.9rem;

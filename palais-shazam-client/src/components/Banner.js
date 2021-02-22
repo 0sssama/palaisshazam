@@ -54,8 +54,8 @@ function Banner() {
                 </video>
             </div>
             <div className="header-effect"></div>
-            <div className="pic p-1 current" style={{backgroundImage: "url('./pic-1.jpg')"}}></div>
-            <div className="pic p-2" style={{backgroundImage: "url('./pic-2.jpg')"}}></div>
+            <div className="pic p-1" style={{backgroundImage: "url('./pic-1.jpg')"}}></div>
+            <div className="pic p-2 current" style={{backgroundImage: "url('./pic-2.jpg')"}}></div>
             <div className="pic p-3" style={{backgroundImage: "url('./pic-3.jpg')"}}></div>
             <div className="pic p-4" style={{backgroundImage: "url('./pic-4.jpg')"}}></div>
         </div>

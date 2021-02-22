@@ -1,18 +1,25 @@
 @import 'breakpoints';
 
-.rooms-container {
-    --roomRowHeight: 20rem;
+.section-container {
+    --sectionRowHeight: 20rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto var(--roomRowHeight);
+    grid-template-rows: auto var(--sectionRowHeight);
+
+    padding-top: 15vh;
     @include tablet {
-        --roomRowHeight: 60vh;
+        --sectionRowHeight: 60vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: var(--roomRowHeight);
+        grid-template-rows: var(--sectionRowHeight);
+    }
+    &.flipped .picture-container {
+        @include tablet {
+            grid-row: 1;
+        }
     }
     .text-container {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 4rem;
         @include tablet {
             padding: 2rem;
         }
@@ -72,19 +79,19 @@
             z-index: 1;
             cursor: pointer;
             bottom: 0;
-            background-color: var(--veryLowOpacityDark);
+            background-color: var(--darkLowOp);
             transition: background-color 500ms ease;
             display: flex;
             align-items: center;
             justify-content: center;
             span {
-                --spanSize: 18px;
+                --spanSize: 15px;
                 display: block;
                 width: var(--spanSize);
                 height: var(--spanSize);
                 border: 3px solid transparent;
-                border-right-color: var(--mainLight);
-                border-bottom-color: var(--mainLight);
+                border-right-color: var(--light);
+                border-bottom-color: var(--light);
                 &.previous {
                     transform: rotate(135deg)
                 }
@@ -93,7 +100,7 @@
                 }
             }
             &:hover {
-                background-color: var(--lowOpacityDark);
+                background-color: var(--darkVeryLowOp);
             }
             &.previous {
                 padding: {
@@ -113,7 +120,7 @@
                 }
             }
         }
-        .room-pic {
+        .banner-pic {
             position: absolute;
             top:0;left:0;right:0;bottom:0;
             background-position: center;

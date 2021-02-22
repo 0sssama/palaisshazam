@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
-  <body class="dark">
+  <body class="light">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
@@ -38,9 +38,27 @@
             fixedHeader.classList.add('hidden')
         }
     }
+    function detectBrowser() { 
+        if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+            return 'Opera';
+        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+            return 'Chrome';
+        } else if(navigator.userAgent.indexOf("Safari") != -1) {
+            return 'Safari';
+        } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+            return 'Firefox';
+        } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+            return 'IE';//crap
+        } else {
+            return 'Unknown';
+        }
+    } 
     window.onload = () => {
       if (fixedHeader) {
         setInterval(()=>{scrollFunction()}, 50)
+        if (detectBrowser() === 'Firefox') {
+          fixedHeader.classList.add('mozilla')
+        }
       }
     }
   </script>

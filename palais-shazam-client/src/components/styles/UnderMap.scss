@@ -1,0 +1,27 @@
+@import 'breakpoints';
+
+.under-map  {
+    padding: 8vh 0;
+    @include mobile {
+        padding: 8vh 1rem;
+    }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-family: 'Josefin Sans';
+        font-weight: 600;
+        color: var(--mainBlue);
+        transition: color 400ms ease;
+        line-height: 1.5rem;
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+        &:hover {
+            color: var(--mainGold)
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@import 'breakpoints';
+
+.instagram {
+    position: relative;
+    width: 100%;
+    padding: 10vh 0;
+    border: 1px solid transparent;
+    border-top-color: var(--mainGold);
+    border-bottom-color: var(--mainBlue);
+    .title {
+        font-size: 3rem;
+        @include mobile {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        font-weight: 300;
+        color: var(--mainGold);
+        text-align: center;
+        font-family: 'Josefin Sans';
+        text-transform: uppercase;
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: fit-content;
+        margin: 3rem auto 2rem;
+        &:hover {
+            .profile-picture {
+                border-radius: 30%;
+            }
+            .profile-username {
+                color: var(--hoverGold)
+            }
+        }
+        &-picture {
+            --imgRes: 3.4rem;
+            margin-right: 0.6rem;
+            width: var(--imgRes);
+            height: var(--imgRes);
+            overflow: hidden;
+            border-radius: 50%;
+            transition: border-radius 500ms ease;
+            img {
+                width: var(--imgRes);
+                height: var(--imgRes);
+            }
+        }
+        &-username {
+            margin-top: -3px;
+            color: var(--mainGold);
+            text-decoration: underline;
+            font-size: 1.2rem;
+            transition: color 500ms ease;
+        }
+    }
+    .images-container {
+        --imageRes: 250px;
+        @include mobile {
+            --imageRes: 90vw;
+        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, var(--imageRes));
+        grid-template-rows: auto;
+        grid-gap: 3rem;
+        justify-content: center;
+        padding: 2rem 3rem 0;
+        .image {
+            width: var(--imageRes);
+            height: var(--imageRes);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.12);
+            transition: opacity 500ms ease;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

@@ -1,5 +1,44 @@
 @import 'breakpoints';
 
+.calendar {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 5;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkVeryLowOp);
+    .close {
+        position: absolute;
+        top: 0; right: 0;
+        cursor: pointer;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title {
+        text-align: center;
+        font-weight: 300;
+        color: var(--light);
+        margin-bottom: 6vh;
+        font-size: 5rem;
+        @include mobile {
+            font-size: 3rem;
+        }
+    }
+    .actual-calendar {
+        width: 95%;
+        @include tablet {
+            width: 400px;
+        }
+    }
+    &.show {
+        display: flex;
+    }
+}
 
 .booking-form {
     position: absolute;
@@ -25,12 +64,12 @@
             width: 1024px;
         }
         .date-input {
-            background-color: var(--mainLight);
+            background-color: var(--light);
             transition: background-color 500ms ease-in-out;
             &:hover {
-                background-color: var(--hoverLight);
+                background-color: var(--darker);
             }
-            color: var(--mainDark);
+            color: var(--dark);
             padding: 1rem 1.2rem;
             height: var(--rowHeight);
             display: flex;
@@ -56,7 +95,7 @@
             }
         }
         button {
-            color: var(--mainLight);
+            color: var(--light);
             height: var(--rowHeight);
             @include tabletNotDesktop {
                 grid-column-start: 1;

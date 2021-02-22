@@ -18,39 +18,50 @@
     --blueLowOp: rgba(27, 60, 128, 0.2);
     --darkBlue: #0c2558;
     --hoverBlue: #4f6ead;
-    
+    --light: #efefef;
+    --lightLowOp: rgba(221, 221, 221, 0.4);
+    --lightVeryLowOp: rgba(221, 221, 221, 0.85);
+    --darker: #ddd;
+    --dark: #232323;
+    --darkLowOp: rgba(35, 35, 35, 0.3);
+    --darkVeryLowOp: rgba(35, 35, 35, 0.9);
+    --footerBG: #ececec;
 }
 
 body {
-    min-height: 300vh;
     width: 100%;
     color: var(--mainLight);
     background-color: var(--mainDark);
     overflow-x: hidden;
     &.dark {
         --mainDark: #232323;
-        --lowOpacityDark: rgba(35, 35, 35, 0.85);
-        --veryLowOpacityDark: rgba(35, 35, 35, 0.4);
+        --lowOpacityDark: rgba(35, 35, 35, 0.8);
+        --veryLowOpacityDark: rgba(35, 35, 35, 0.6);
         --mainLight: #efefef;
         --hoverLight: rgb(221, 221, 221);
         --lowOpacityLight: rgba(239, 239, 239, 0.85);
         --shadow: rgba(0, 0, 0, 0.12);
-        --lightShadow: rgba(255, 255, 255, 0.12);
+        --lightShadow: rgba(255, 255, 255, 0.15);
     }
     &.light {
         --mainDark: #efefef;
-        --lowOpacityDark: rgba(220, 220, 220, 0.85);
-        --veryLowOpacityDark: rgba(220, 220, 220, 0.4);
+        --lowOpacityDark: rgba(220, 220, 220, 0.8);
+        --veryLowOpacityDark: rgba(220, 220, 220, 0.6);
         --mainLight: #232323;
         --hoverLight: rgb(34, 34, 34);
         --lowOpacityLight: rgba(16, 16, 16, 0.85);
         --shadow: rgba(255, 255, 255, 0.12);
-        --lightShadow: rgba(0, 0, 0, 0.12);
-
+        --lightShadow: rgba(0, 0, 0, 0.15);
+        
     }
 }
+::selection {
+    color: var(--hoverGold);
+    background-color: var(--mainLight);
+}
 
-button, input[type='submit'] {
+
+button:not(.react-calendar button), input[type='submit'] {
     padding: 1rem 1.5rem;
     font-weight: 600;
     border: none;
@@ -71,7 +82,7 @@ button, input[type='submit'] {
     &.gold.primary {
         border: 2px solid var(--mainGold);
         background-image: linear-gradient(45deg, var(--darkGold), var(--hoverGold));
-        color: var(--mainLight);
+        color: var(--light);
         box-shadow: 0px 0px 0px var(--mainGold);
         &:hover {
             box-shadow: 0px 0px 4px var(--mainGold);
@@ -84,13 +95,13 @@ button, input[type='submit'] {
         background-color: transparent;
         &:hover {
             background-color: var(--mainGold);
-            color: var(--mainLight);
+            color: var(--light);
         }
     }
     &.blue.primary {
         border: 2px solid var(--mainBlue);
         background-image: linear-gradient(45deg, var(--darkBlue), var(--hoverBlue));
-        color: var(--mainLight);
+        color: var(--light);
         &:hover {
             background-position: 100% center;
         }
@@ -101,7 +112,7 @@ button, input[type='submit'] {
         background-color: transparent;
         &:hover {
             background-color: var(--mainBlue);
-            color: var(--mainLight);
+            color: var(--light);
         }
     }
 }
@@ -152,5 +163,18 @@ input {
 .hide-for-desktop {
     @include desktop {
         display: none!important;
+    }
+}
+.fill {
+    height: 300vh;
+}
+
+.map-element {
+    padding-top: 15vh;
+    width: 95%;
+    height: 650px;
+    margin: auto;
+    @include tablet {
+        width: 90%;
     }
 }

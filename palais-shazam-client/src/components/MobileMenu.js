@@ -14,7 +14,7 @@ function MobileMenu(props) {
         },
         {
             name: 'Restaurant',
-            link: '#menu',
+            link: '#restaurant',
         },
         {
             name: 'Swimming Pool',

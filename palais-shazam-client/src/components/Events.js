@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles/Section.scss'
 
-function Rooms() {
+function Events() {
     let currentImage = 1
-    const imgCount = 3
+    const imgCount = 1
     const nextImage = () => {
         if (currentImage === imgCount) {
             currentImage = 1
@@ -34,10 +34,10 @@ function Rooms() {
         }
     }
     return (
-        <div className="section-container rooms" id="rooms">
+        <div className="section-container events flipped" id="events">
             <div className="text-container">
                 <div className="title" data-aos="fade-up" data-aos-duration="600">
-                    <p>OUR ROOMS</p>
+                    <p>EVENTS</p>
                     <span></span>
                 </div>
                 <div className="content" data-aos="fade-up" data-aos-duration="800">
@@ -50,7 +50,7 @@ function Rooms() {
                         augue ante, congue ut tristique id, iaculis eu arcu.
                     </p>
                     <div className="explore-btn" data-aos="fade-up" data-aos-duration="1000">
-                        <p>View our Rooms</p>
+                        <p>VIEW UPCOMING EVENTS</p>
                         <span></span>
                     </div>
                 </div>
@@ -62,12 +62,10 @@ function Rooms() {
                 <div className="btn next" onClick={nextImage}>
                     <span className="next"></span>
                 </div>
-                <div className="banner-pic pic-1 current" style={{backgroundImage: 'url(./pic-3.jpg)'}}></div>
-                <div className="banner-pic pic-2" style={{backgroundImage: 'url(./pic-4.jpg)'}}></div>
-                <div className="banner-pic pic-3" style={{backgroundImage: 'url(./pic-5.jpg)'}}></div>
+                <div className="banner-pic pic-1 current" style={{backgroundImage: 'url(./pic-6.jpg)'}}></div>
             </div>
         </div>
     )
 }
 
-export default Rooms
+export default Events

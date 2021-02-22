@@ -6,7 +6,7 @@
     @include mobile {
         --paddingSides: 10vw;
     }
-    padding: var(--paddingVertical) var(--paddingSides);
+    padding: var(--paddingVertical) var(--paddingSides) 0;
     .title {
         text-align: center;
         &.big {
